@@ -119,6 +119,11 @@
     .service-card:hover h3, .service-card:focus-within h3 { transform: translateY(-4px); }
     .service-card:hover p, .service-card:focus-within p { transform: none; opacity: 1; }
     .service-disclaimer { margin: 1.2rem 0 0; color: #78837b; font-size: .72rem; }
+    .service-proof { margin-top: 2.4rem; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); background: rgba(255,255,255,.34); }
+    .proof-item { padding: 1.45rem; border-right: 1px solid var(--line); }
+    .proof-item:last-child { border-right: 0; }
+    .proof-item strong { display: block; font-family: var(--serif); font-size: 1.2rem; font-weight: 500; color: var(--forest); }
+    .proof-item span { display: block; margin-top: .35rem; color: #69766d; font-size: .78rem; line-height: 1.55; }
 
     .legacy { background: var(--paper); }
     .legacy-grid { display: grid; grid-template-columns: minmax(20rem, .8fr) minmax(0, 1.25fr); gap: clamp(3rem, 8vw, 9rem); align-items: center; }
@@ -159,6 +164,14 @@
     .dot.active { background: var(--gold); width: 4rem; }
     .count { font-family: var(--serif); font-size: 1.05rem; color: rgba(255,255,255,.48); }
     .count b { color: var(--gold); font-size: 1.6rem; font-weight: 400; }
+    .experience-ledger { margin-top: clamp(4rem, 7vw, 7rem); padding-top: 3rem; border-top: 1px solid rgba(255,255,255,.16); display: grid; grid-template-columns: minmax(16rem,.58fr) minmax(0,1.42fr); gap: clamp(3rem, 7vw, 7rem); }
+    .experience-ledger h3 { margin: 1.1rem 0 1.3rem; font-family: var(--serif); font-size: clamp(2.7rem, 4.5vw, 4.8rem); font-weight: 400; line-height: .96; }
+    .experience-ledger p { margin: 0; color: rgba(255,255,255,.58); line-height: 1.8; }
+    .project-list { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(255,255,255,.16); }
+    .project-item { position: relative; padding: 1.2rem 1rem 1.2rem 2.2rem; border-bottom: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.82); font-family: var(--serif); font-size: 1.08rem; transition: color .3s ease, padding-left .3s ease; }
+    .project-item::before { content: ""; position: absolute; left: .2rem; top: 1.75rem; width: .75rem; height: 1px; background: var(--gold); }
+    .project-item:hover { color: var(--gold); padding-left: 2.5rem; }
+    .verified-note { grid-column: 1 / -1; margin-top: 1.2rem; color: rgba(255,255,255,.42); font-size: .72rem; }
 
     .approach { background: var(--cream); }
     .approach-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(3rem, 8vw, 8rem); }
@@ -169,6 +182,16 @@
     .step > span { color: var(--gold); font-family: var(--serif); font-size: 1.2rem; }
     .step h3 { margin: 0 0 .6rem; font-family: var(--serif); font-size: 1.6rem; font-weight: 400; }
     .step p { margin: 0; color: #657168; font-size: .9rem; }
+
+    .team { background: var(--paper); }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .team-card { min-height: 20rem; padding: 1.6rem; background: var(--paper); display: flex; flex-direction: column; transition: background .45s ease, color .45s ease, transform .45s cubic-bezier(.22,.7,.16,1); }
+    .team-card:hover { position: relative; z-index: 2; background: var(--forest); color: var(--white); transform: translateY(-5px); }
+    .team-initials { width: 3.3rem; height: 3.3rem; display: grid; place-items: center; border: 1px solid var(--gold); color: var(--gold); font-family: var(--serif); font-size: 1.05rem; }
+    .team-role { margin-top: auto; padding-top: 2.5rem; color: var(--gold); font-size: .66rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+    .team-card h3 { margin: .6rem 0 .8rem; font-family: var(--serif); font-size: 1.65rem; font-weight: 400; line-height: 1.05; }
+    .team-card p { margin: 0; color: #66736a; font-size: .79rem; line-height: 1.7; transition: color .45s ease; }
+    .team-card:hover p { color: rgba(255,255,255,.66); }
 
     .region { padding: clamp(5rem, 10vw, 10rem) clamp(1.25rem, 5vw, 5.5rem); color: var(--white); background: linear-gradient(120deg, rgba(11,33,24,.96), rgba(20,57,42,.83)), url('assets/concept-wetlands.png') center/cover; }
     .region .shell { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .65fr); gap: 5rem; align-items: end; }
@@ -185,6 +208,12 @@
     .contact-details { margin-top: 3rem; display: grid; gap: 1.1rem; }
     .contact-link { display: flex; gap: 1rem; align-items: center; font-family: var(--serif); font-size: 1.18rem; }
     .contact-link span { color: var(--gold); font-family: var(--sans); font-size: .69rem; letter-spacing: .14em; text-transform: uppercase; min-width: 4rem; }
+    .offices { margin-top: 2.5rem; display: grid; gap: .8rem; }
+    .office { padding: 1.1rem 1.2rem; border: 1px solid var(--line); background: var(--white); }
+    .office h3 { margin: 0 0 .4rem; color: var(--forest); font-family: var(--serif); font-size: 1.15rem; font-weight: 500; }
+    .office address { color: #657168; font-size: .78rem; font-style: normal; line-height: 1.7; }
+    .office a { transition: color .25s ease; }
+    .office a:hover { color: var(--gold); }
     .inquiry { padding: clamp(1.6rem, 4vw, 3.4rem); background: var(--cream); border: 1px solid var(--line); }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .field { display: grid; gap: .45rem; margin-bottom: 1rem; }
@@ -223,6 +252,7 @@
       .slide { grid-template-columns: 1fr; }
       .slide-media { min-height: 32rem; }
       .slide-copy { min-height: 23rem; }
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 820px) {
       .site-header { height: 4.8rem; }
@@ -238,13 +268,17 @@
       .hero h1 { font-size: clamp(3.5rem, 15vw, 6.2rem); }
       .intro-band .shell { grid-template-columns: 1fr; }
       .band-item { justify-content: flex-start; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); padding: .65rem 0; }
-      .section-head, .legacy-grid, .approach-grid, .region .shell, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .section-head, .legacy-grid, .approach-grid, .region .shell, .contact-grid, .experience-ledger { grid-template-columns: 1fr; gap: 2.5rem; }
       .section-head { align-items: start; }
       .service-grid { grid-template-columns: 1fr 1fr; gap: .75rem; }
       .service-card, .service-card:nth-child(1), .service-card:nth-child(2), .service-card:nth-child(3), .service-card:nth-child(4), .service-card:nth-child(5) { grid-column: span 1; min-height: 24rem; }
       .service-card:last-child { grid-column: 1 / -1; }
       .legacy-year { min-height: 25rem; }
       .principles { grid-template-columns: 1fr; }
+      .service-proof { grid-template-columns: 1fr; }
+      .proof-item { border-right: 0; border-bottom: 1px solid var(--line); }
+      .proof-item:last-child { border-bottom: 0; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
       .slide-media { min-height: 25rem; }
       .region-copy { max-width: 35rem; }
       .footer-grid { grid-template-columns: 1fr; }
@@ -264,6 +298,7 @@
       .dots { order: 3; width: 100%; }
       .dot { flex: 1; }
       .form-row { grid-template-columns: 1fr; }
+      .project-list, .team-grid { grid-template-columns: 1fr; }
       .legal { flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -283,10 +318,10 @@
         <span class="brand-copy"><strong>Central Florida Landscaping</strong><span>Commercial Landscapes · Since 1976</span></span>
       </a>
       <div class="nav-links" id="navLinks">
+        <a href="#legacy">Company</a>
         <a href="#services">Services</a>
-        <a href="#legacy">Legacy</a>
-        <a href="#work">Visual Preview</a>
-        <a href="#approach">Approach</a>
+        <a href="#experience">Experience</a>
+        <a href="#team">Team</a>
         <a class="nav-cta" href="#contact">Request a consultation</a>
       </div>
       <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
@@ -303,7 +338,7 @@
           <p class="hero-intro">Landscape construction, irrigation, hardscape, grounds maintenance and wetlands mitigation—delivered by one experienced team across West Central Florida.</p>
           <div class="hero-actions">
             <a class="button gold" href="#contact">Start a conversation</a>
-            <a class="button ghost" href="#work">Explore the visual direction</a>
+            <a class="button ghost" href="#experience">Explore our experience</a>
           </div>
         </div>
         <div class="hero-stat" aria-label="Established in 1976"><strong>1976</strong><span>Founded in Florida</span></div>
@@ -326,11 +361,16 @@
           <p>From initial site work to long-term stewardship, Central Florida Landscaping brings construction expertise and regional knowledge to complex commercial environments.</p>
         </div>
         <div class="service-grid">
-          <article class="service-card reveal" style="--delay: 0ms"><div class="service-media"><img src="assets/concept-campus.png" alt="Conceptual commercial landscape construction at a Florida corporate campus" loading="lazy"></div><div class="service-top"><span class="service-number">01</span><span class="service-type">Build</span></div><div class="service-content"><h3>Commercial Landscape Construction</h3><p>Coordinated installation for ambitious commercial properties and public-facing environments.</p></div></article>
-          <article class="service-card reveal" style="--delay: 90ms"><div class="service-media"><img src="assets/concept-irrigation.png" alt="Conceptual precision irrigation in a commercial Florida landscape" loading="lazy"></div><div class="service-top"><span class="service-number">02</span><span class="service-type">Water</span></div><div class="service-content"><h3>Irrigation Design</h3><p>Efficient water-distribution planning focused on plant health, performance and conservation.</p></div></article>
-          <article class="service-card reveal" style="--delay: 180ms"><div class="service-media"><img src="assets/official-hardscape-enhanced.png" alt="Enhanced official Central Florida Landscaping hardscape image" loading="lazy"></div><div class="service-top"><span class="service-number">03</span><span class="service-type">Craft</span></div><div class="service-content"><h3>Hardscape Construction</h3><p>Durable paving and site elements that connect architecture, circulation and landscape.</p></div></article>
+          <article class="service-card reveal" style="--delay: 0ms"><div class="service-media"><img src="assets/concept-campus.png" alt="Conceptual commercial landscape construction at a Florida corporate campus" loading="lazy"></div><div class="service-top"><span class="service-number">01</span><span class="service-type">Build</span></div><div class="service-content"><h3>Commercial Landscape Construction</h3><p>Engineering, horticultural science and artistic skill brought together to create functional exterior environments—from corporate campuses to urban and retail settings.</p></div></article>
+          <article class="service-card reveal" style="--delay: 90ms"><div class="service-media"><img src="assets/concept-irrigation.png" alt="Conceptual precision irrigation in a commercial Florida landscape" loading="lazy"></div><div class="service-top"><span class="service-number">02</span><span class="service-type">Water</span></div><div class="service-content"><h3>Irrigation Design</h3><p>Specialized systems using current water-distribution technology, including computerized evapotranspiration, to maximize plant performance while supporting conservation.</p></div></article>
+          <article class="service-card reveal" style="--delay: 180ms"><div class="service-media"><img src="assets/official-hardscape-enhanced.png" alt="Enhanced official Central Florida Landscaping hardscape image" loading="lazy"></div><div class="service-top"><span class="service-number">03</span><span class="service-type">Craft</span></div><div class="service-content"><h3>Hardscape Construction</h3><p>Masonry walls, concrete and brick pavers, rock walks, fountains, site furnishings, gates, custom fencing, awnings, enclosures and outdoor kitchens.</p></div></article>
           <article class="service-card reveal" style="--delay: 90ms"><div class="service-media"><img src="assets/concept-maintenance.png" alt="Conceptual commercial grounds maintenance in Central Florida" loading="lazy"></div><div class="service-top"><span class="service-number">04</span><span class="service-type">Care</span></div><div class="service-content"><h3>Grounds Maintenance</h3><p>Consistent care that protects the landscape investment and keeps properties presentation-ready.</p></div></article>
           <article class="service-card reveal" style="--delay: 180ms"><div class="service-media"><img src="assets/concept-wetlands.png" alt="Conceptual wetlands mitigation beside a Florida commercial development" loading="lazy"></div><div class="service-top"><span class="service-number">05</span><span class="service-type">Restore</span></div><div class="service-content"><h3>Wetlands Mitigation</h3><p>Integrated environmental work supporting resilient Florida sites and sensitive ecosystems.</p></div></article>
+        </div>
+        <div class="service-proof reveal" aria-label="Service credentials">
+          <div class="proof-item"><strong>Licensed specialists</strong><span>Landscape and irrigation contractor serving complex commercial environments.</span></div>
+          <div class="proof-item"><strong>ICPI certified</strong><span>Certified installation expertise for conventional and permeable paver systems.</span></div>
+          <div class="proof-item"><strong>ARCSA member</strong><span>Experience informed by rainwater catchment and responsible water-use practices.</span></div>
         </div>
         <p class="service-disclaimer reveal">Service imagery is conceptual presentation support except for the enhanced official hardscape photograph.</p>
       </div>
@@ -342,13 +382,13 @@
         <div class="legacy-copy reveal">
           <div class="eyebrow">A Florida legacy</div>
           <h2 class="display">Experience measured in decades, relationships and lasting work.</h2>
-          <p>Central Florida Landscaping was founded with a clear objective: deliver a level of service unequaled in the landscape industry. That commitment continues through a multidisciplinary approach to planning, implementation and long-term care.</p>
+          <p>Central Florida Landscaping was founded with a clear objective: deliver a level of service unequaled in the landscape industry. Client satisfaction, the development of its people and a multidisciplinary approach to design, planning and implementation remain central to the company’s philosophy.</p>
           <div class="principles"><div><strong>Integrated</strong><span>Multiple specialties, one coordinated team</span></div><div><strong>Established</strong><span>Serving commercial clients since 1976</span></div><div><strong>Regional</strong><span>Deep knowledge of Florida conditions</span></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section work" id="work">
+    <section class="section work" id="experience">
       <div class="shell">
         <div class="section-head reveal">
           <div><div class="eyebrow">Visual direction</div><h2 class="display">Landscapes with presence.</h2></div>
@@ -377,6 +417,30 @@
             <div class="count" aria-live="polite"><b id="slideNumber">01</b> / 03</div>
           </div>
         </div>
+        <div class="experience-ledger reveal">
+          <div>
+            <div class="eyebrow">Published experience</div>
+            <h3>Recognized work across Florida.</h3>
+            <p>Central Florida Landscaping’s official website identifies experience spanning hospitality, entertainment, education, healthcare, transportation and civic environments.</p>
+          </div>
+          <div class="project-list" aria-label="Projects published by Central Florida Landscaping">
+            <div class="project-item">Downtown Disney</div>
+            <div class="project-item">Universal Studios</div>
+            <div class="project-item">Tampa Waterside Marriott</div>
+            <div class="project-item">Veteran’s Expressway</div>
+            <div class="project-item">Ashley 400 Plaza</div>
+            <div class="project-item">University of South Florida</div>
+            <div class="project-item">University of Tampa</div>
+            <div class="project-item">World of Golf — PGA Headquarters</div>
+            <div class="project-item">Tampa General Hospital</div>
+            <div class="project-item">MacDill Air Force Base</div>
+            <div class="project-item">Jungala at Busch Gardens Tampa</div>
+            <div class="project-item">Ocean Prime Tampa</div>
+            <div class="project-item">Dr. Kiran Patel Center at USF Tampa</div>
+            <div class="project-item">Bern’s Park in Tampa</div>
+            <p class="verified-note">Project names are reproduced from CFL’s official website. Conceptual preview imagery above is not presented as photography of these projects.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -391,13 +455,39 @@
       </div>
     </section>
 
+    <section class="section team" id="team">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">The people behind the work</div><h2 class="display">Experience across every department.</h2></div>
+          <p>CFL’s multidisciplinary team connects executive leadership, estimating, field operations, project management, contracts and human resources.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card reveal"><div class="team-initials">CH</div><div class="team-role">President & Founder</div><h3>Charles M. Holder</h3><p>Founded CFL in April 1976. Licensed landscape contractor, Florida Certified Pest Control Operator, ICPI Certified Installer and ARCSA Accredited Professional.</p></article>
+          <article class="team-card reveal" style="--delay:60ms"><div class="team-initials">XW</div><div class="team-role">Estimator</div><h3>Xuan “Swan” M. Wallis</h3><p>With CFL since 1997, preparing estimates for new landscape construction and renovation projects with a focus on accurate bid proposals.</p></article>
+          <article class="team-card reveal" style="--delay:120ms"><div class="team-initials">VH</div><div class="team-role">Assistant Bid Coordinator</div><h3>Victoria Holder</h3><p>With CFL since 2007, supporting the estimating department through bid organization, plan procurement and document coordination.</p></article>
+          <article class="team-card reveal" style="--delay:180ms"><div class="team-initials">JR</div><div class="team-role">Project Manager</div><h3>John E. Reed</h3><p>With CFL since 1990, managing grounds maintenance projects across the Tampa and Manatee–Sarasota divisions.</p></article>
+          <article class="team-card reveal"><div class="team-initials">CH</div><div class="team-role">Operations Manager</div><h3>Christopher Hoggard</h3><p>With CFL since 2018, scheduling landscape, irrigation and hardscape crews in Tampa. OSHA-30 and Green Industries BMP certified.</p></article>
+          <article class="team-card reveal" style="--delay:60ms"><div class="team-initials">MG</div><div class="team-role">Contracts Administrator</div><h3>Mary “Mitzie” A. Greco</h3><p>With CFL since 1995, reviewing contracts and coordinating client administration, billing and invoicing.</p></article>
+          <article class="team-card reveal" style="--delay:120ms"><div class="team-initials">SH</div><div class="team-role">Human Resources</div><h3>Shyrose “Shy” D. Hirji</h3><p>With CFL since 2003, overseeing payroll, benefits administration and employee support.</p></article>
+          <article class="team-card reveal" style="--delay:180ms"><div class="team-initials">NH</div><div class="team-role">Front Desk Coordinator</div><h3>Noah Hirji</h3><p>With CFL since 2024, supporting incoming calls, filing and daily office organization.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section class="region" aria-label="Primary service region">
-      <div class="shell"><div class="reveal"><div class="eyebrow">West Central Florida</div><h2 class="display">Built for the place we know.</h2></div><div class="region-copy reveal"><p>Central Florida Landscaping concentrates primarily on West Central Florida, serving the corridor from Orlando to Sarasota.</p><div class="region-route"><span>Orlando</span><span>Sarasota</span></div></div></div>
+      <div class="shell"><div class="reveal"><div class="eyebrow">West Central Florida</div><h2 class="display">Built for the place we know.</h2></div><div class="region-copy reveal"><p>CFL concentrates primarily on the Orlando–Sarasota corridor, with completed work extending from the Florida Keys to the Panhandle, as well as Georgia and Alabama.</p><div class="region-route"><span>Orlando</span><span>Sarasota</span></div></div></div>
     </section>
 
     <section class="section contact" id="contact">
       <div class="shell contact-grid">
-        <div class="contact-copy reveal"><div class="eyebrow">Start a conversation</div><h2 class="display">Bring the next site to life.</h2><p>Connect with the estimating team to discuss commercial landscape construction, irrigation, hardscape, maintenance or wetlands work.</p><div class="contact-details"><a class="contact-link" href="tel:+18136231771"><span>Call</span>+1 (813) 623-1771</a><a class="contact-link" href="mailto:xwallis@cflonline.com"><span>Email</span>xwallis@cflonline.com</a><a class="contact-link" href="https://www.cflonline.com" target="_blank" rel="noopener"><span>Web</span>cflonline.com</a></div></div>
+        <div class="contact-copy reveal">
+          <div class="eyebrow">Start a conversation</div><h2 class="display">Bring the next site to life.</h2><p>Connect with the estimating team to discuss commercial landscape construction, irrigation, hardscape, maintenance or wetlands work.</p>
+          <div class="contact-details"><a class="contact-link" href="tel:+18136231771"><span>Call</span>+1 (813) 623-1771</a><a class="contact-link" href="mailto:xwallis@cflonline.com"><span>Estimates</span>xwallis@cflonline.com</a><a class="contact-link" href="mailto:info@cflonline.com"><span>General</span>info@cflonline.com</a><a class="contact-link" href="https://www.cflonline.com" target="_blank" rel="noopener"><span>Web</span>cflonline.com</a></div>
+          <div class="offices" aria-label="Central Florida Landscaping offices">
+            <article class="office"><h3>Corporate Office · Tampa</h3><address>6109 Orient Road, Tampa, FL 33610<br><a href="tel:+18136231771">813.623.1771</a> · Fax 813.620.3385</address></article>
+            <article class="office"><h3>Bradenton Office</h3><address>4920 Lena Road, Suite 104, Bradenton, FL 34210<br><a href="tel:+13524765601">352.476.5601</a> · <a href="tel:+19417267798">941.726.7798</a></address></article>
+          </div>
+        </div>
         <form class="inquiry reveal" id="inquiryForm">
           <div class="form-row"><div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div><div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization"></div></div>
           <div class="form-row"><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="service">Service</label><select id="service" name="service"><option>Commercial Landscape Construction</option><option>Irrigation Design</option><option>Hardscape Construction</option><option>Grounds Maintenance</option><option>Wetlands Mitigation</option></select></div></div>
@@ -410,7 +500,7 @@
   </main>
 
   <footer>
-    <div class="footer-grid"><div><div class="footer-brand">Central Florida Landscaping</div><div class="footer-copy">Commercial landscape construction, irrigation design, hardscape construction, grounds maintenance and wetlands mitigation.</div></div><div class="footer-links"><a href="#services">Services</a><a href="#legacy">Legacy</a><a href="#work">Visual Preview</a><a href="#contact">Contact</a></div></div>
+    <div class="footer-grid"><div><div class="footer-brand">Central Florida Landscaping</div><div class="footer-copy">Commercial landscape construction, irrigation design, hardscape construction, grounds maintenance and wetlands mitigation.</div></div><div class="footer-links"><a href="#legacy">Company</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#team">Team</a><a href="#contact">Contact</a></div></div>
     <div class="legal"><span>© <span id="year"></span> Central Florida Landscaping, Inc. Preview concept.</span><span>Conceptual images are clearly identified and are not represented as completed client work.</span></div>
   </footer>
 
